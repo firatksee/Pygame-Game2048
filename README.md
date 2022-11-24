@@ -1,2 +1,7 @@
 # Game2048
-Pygame 2048 Game
+
+Only requirement for the game is Pygame.
+
+```
+python3 -m pip -r requirements.txt
+```
