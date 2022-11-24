@@ -86,7 +86,7 @@ class Game2048(pygame.sprite.Sprite):
 				surface.blit(text, text_rect)
 				coor_index += 1
 
-		if self.board_full():
+		if self.is_board_full():
 			if self.game_over():
 				text_bg = pygame.Surface((self.text_size * 5, self.text_size * 1.5))
 				text_bg.fill('#a11d33')
@@ -116,7 +116,7 @@ class Game2048(pygame.sprite.Sprite):
 
 
 	def place_two(self):
-		if not self.board_full():
+		if not self.is_board_full():
 			while True:
 				y = random.randint(0,self.size-1)
 				x = random.randint(0,self.size-1)
@@ -133,7 +133,7 @@ class Game2048(pygame.sprite.Sprite):
 				coors.append((coor_x,coor_y))
 		return coors
 
-	def board_full(self):
+	def is_board_full(self):
 		for y in self.game_board:
 			for x in y:
 				if x == 0:
@@ -141,7 +141,7 @@ class Game2048(pygame.sprite.Sprite):
 		return True
 
 	def game_over(self):
-		if self.board_full():
+		if self.is_board_full():
 			for y in range(self.size):
 				for x in range(self.size):
 					try:
