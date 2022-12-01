@@ -15,14 +15,14 @@ class Game2048(pygame.sprite.Sprite):
 		self.plate_coor_center = []
 
 		self.image = pygame.Surface((self.plate_size,self.plate_size))
-		self.image.fill('#6d9886')
+		self.image.fill('#656c75')
 		self.rect = self.image.get_rect(topleft = (self.plate_coor[0]))
 
 		self.text_size = 50
 		self.font = pygame.font.SysFont('cambria', self.text_size)
 
 		self.colors = {
-			0:'#6d9886',
+			0:'#656c75',
 			2:'#ffba08',
 			4:'#f48c06',
 			8:'#e85d04',
